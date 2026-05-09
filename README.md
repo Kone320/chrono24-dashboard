@@ -1,6 +1,6 @@
 <!-- BANNER -->
 <p align="center">
-  <img src="banner.png" alt="Chrono24 BI Dashboard Banner" width="100%"/>
+  <img src="components/banner_chrono24_readme.svg" alt="Chrono24 BI Dashboard Banner" width="100%"/>
 </p>
 
 <h1 align="center">⌚ Chrono24 — BI Analytics Dashboard</h1>
