@@ -24,6 +24,8 @@
 
 ## 🎯 Présentation du projet
 
+
+
 Ce projet de **Business Intelligence** a été réalisé dans le cadre du cours d'**Introduction au Big Data** à l'Université d'Évry Paris-Saclay. Il s'articule autour de deux axes analytiques complémentaires appliqués aux données de **Chrono24**, leader mondial de la vente de montres de luxe en ligne.
 
 > **Question centrale :** *Quels flux commerciaux internationaux dominent sur Chrono24, et ces flux influencent-ils la satisfaction des clients ? Comment détecter de manière précoce les vendeurs dont la performance se dégrade ?*
@@ -69,4 +71,4 @@ chrono24_app/
 ---
 
 ##  Pipeline CRISP-DM
-
+![CRISP-DM](components/crisp.png)
