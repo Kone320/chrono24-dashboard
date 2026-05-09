@@ -66,5 +66,7 @@ chrono24_app/
 └── components/
     └── kpi_cards.py         # Composants UI reutilisables
 ```
-└── components/
-└── kpi_cards.py         # Composants UI réutilisables
+---
+
+##  Pipeline CRISP-DM
+
