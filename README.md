@@ -72,3 +72,95 @@ chrono24_app/
 
 ##  Pipeline CRISP-DM
 ![CRISP-DM](components/crisp.png)
+
+
+### 🧮 Formule du Health Score
+
+```python
+Health Score = (
+    c_rating   × 0.30   # Note snapshot normalisée
+  + c_trend    × 0.20   # Tendance sentiment 3 mois
+  + c_sent     × 0.15   # Niveau sentiment 6 mois
+  + c_recency  × 0.15   # Récence des avis négatifs
+  + c_vol      × 0.10   # Stabilité (inverse volatilité)
+  + c_momentum × 0.10   # Momentum 30j vs 12m
+) × 100
+```
+
+| Catégorie | Seuil | Action |
+|---|---|---|
+| 🟢 Sain | HS ≥ 72 | Surveillance standard |
+| 🟡 À surveiller | 55 ≤ HS < 72 | Monitoring renforcé |
+| 🔴 En danger | HS < 55 | Intervention requise |
+
+---
+
+## 📱 Les 8 pages du dashboard
+
+### Module 1 — Flux Commerciaux
+
+| Page | Description | Visuels |
+|---|---|---|
+| P1 · Vue Globale | KPIs macro + storytelling | Donut · courbe satisfaction · bar chart |
+| P2 · Cartographie des Flux | Routes commerciales dominantes | Heatmap 12×12 · bar chart horizontal |
+| P3 · Impact Satisfaction | Domestique vs Intl vs EU vs Intercontinental | Grouped bar · radar · lollipop |
+| P4 · Évolution Temporelle | Trajectoire 2016–2020 + impact Covid | Dual-axis · area chart |
+| P5 · Analyse par Marque | Concentration du marché horloger | Treemap · bubble chart 3 dimensions |
+
+### Module 2 — Seller Health
+
+| Page | Description | Visuels |
+|---|---|---|
+| P6 · Portfolio Overview | Vue d'ensemble des 2 309 vendeurs | Histogramme · donut · scatter |
+| P7 · Risk Map par Pays | Concentration géographique du risque | Choropleth · bar chart · scatter |
+| P8 · Drill-down Vendeur | Profil individuel + diagnostic ML | Radar chart · barre HS · métriques |
+
+---
+
+## 🚀 Lancer l'application en local
+
+```bash
+# Cloner le repository
+git clone git@github.com:Kone320/chrono24-dashboard.git
+cd chrono24-dashboard
+
+# Installer les dépendances
+pip install -r requirements.txt
+
+# Lancer l'application
+streamlit run app.py
+```
+
+---
+
+## 🌐 Application déployée
+
+👉 **https://chrono24-dashboard-bosky.streamlit.app/**
+
+---
+
+## 🛠️ Stack technique
+
+| Technologie | Usage |
+|---|---|
+| `streamlit` | Interface web et déploiement cloud |
+| `plotly` | Visualisations interactives |
+| `pandas` | Traitement et agrégation des données |
+| `scikit-learn` | Gradient Boosting · Isolation Forest |
+| `numpy` | Calculs numériques et normalisation |
+| `openpyxl` | Lecture des fichiers Excel |
+| `matplotlib` | Support des dégradés de couleur |
+
+
+
+---
+
+## 🏫 Contexte académique
+
+Projet réalisé dans le cadre du cours d'**Introduction au Big Data**  
+**Université d'Évry Paris-Saclay** · 2025–2026
+
+
+---
+
+*Made with ❤️ · Data Science · Big Data · Machine Learning*
