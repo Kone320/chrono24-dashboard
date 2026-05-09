@@ -44,23 +44,27 @@ Ce projet de **Business Intelligence** a été réalisé dans le cadre du cours 
 
 ##  Architecture du projet
 
+```
 chrono24_app/
 ├── app.py                   # Entry point · navigation · routing
-├── config.py                # Thème dark · palette · template Plotly
+├── config.py                # Theme dark · palette · template Plotly
 ├── requirements.txt
 ├── data/
 │   ├── loader.py            # @st.cache_data · lecture xlsx
-│   ├── processor.py         # Feature engineering · agrégations
+│   ├── processor.py         # Feature engineering · agregations
 │   ├── chrono24_dashboard.xlsx
 │   └── Chrono24_SellerHealth_PowerBI_Model.xlsx
 ├── modules/
 │   ├── p1_vue_globale.py    # KPIs + storytelling
 │   ├── p2_flux.py           # Heatmap + bar chart flux
-│   ├── p3_satisfaction.py   # Comparaisons multi-critères
+│   ├── p3_satisfaction.py   # Comparaisons multi-criteres
 │   ├── p4_evolution.py      # Dual-axis timeline
 │   ├── p5_marques.py        # Treemap + bubble chart
 │   ├── p6_portfolio.py      # Seller Health overview
 │   ├── p7_risk_map.py       # Choropleth + risk map
 │   └── p8_drill_down.py     # Radar chart + fiche vendeur
+└── components/
+    └── kpi_cards.py         # Composants UI reutilisables
+```
 └── components/
 └── kpi_cards.py         # Composants UI réutilisables
